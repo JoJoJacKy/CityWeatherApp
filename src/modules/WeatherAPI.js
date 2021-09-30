@@ -33,7 +33,7 @@ async function weatherAPI(searchParameter) {
 
     const search = searchParameter || "downey";
     const units = "imperial";
-    const appid = "3f3520d066bd550c7930bc17d88f2f43";
+    const appid = "";
 
     const cityURL = cityEndpoint + search + "&units=" + units + "&appid=" + appid;
     const dayHrURL = dayHourEndpoint + search + "&units=" + units + "&appid=" + appid;
