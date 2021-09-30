@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+::placeholder {
+  color: #fff;
+  font-weight: 700;
+}
+
+body {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0,0,0,0.4)), url(../images/beach.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 75px 300px 150px 300px;
+}
+/* <============ WEATHER MAIN ============> */
+.weather-info-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-info {
+  max-width: 55%;
+}
+
+.weather-info-description {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.weather-info-city {
+  margin-bottom: 10px;
+}
+/* .weather-info-date {
+  
+}
+.weather-info-time {
+  
+} */
+.weather-info-temp {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.weather-info-units-f {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.weather-info-units-c {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.weather-info-units-f.selected-unit, .weather-info-units-c.selected-unit {
+  display: none;
+}
+
+.weather-info-icon {
+  height: 90px;
+  width: 90px;
+  margin-bottom: 20px;
+  filter: invert(100%) sepia(10%) saturate(0%) hue-rotate(60deg) brightness(108%) contrast(103%);
+}
+
+.search-box {
+  display: flex;
+  border-bottom: 2px solid #fff;
+  max-width: 220px;
+}
+
+.search-box-input {
+  background-color: transparent;
+  border: 0;
+  padding: 5px;
+  color: #fff;
+  margin-left: 5px;
+}
+/* Removing the onclick border styling */
+.search-box-input:focus {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+}
+.search-icon img {
+  margin-top: 2px;
+  height: 18px;
+  width: 18px;
+  filter: invert(100%) sepia(10%) saturate(0%) hue-rotate(60deg) brightness(108%) contrast(103%);
+}
+
+.error-msg {
+  margin-top: 2px;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+/* <============ WEATHER DETAILS ============> */
+
+.weather-details-feels,
+.weather-details-humidity,
+.weather-details-chance-rain,
+.weather-details-wind-speed {
+  margin-bottom: 2rem;
+  display: flex;
+}
+
+.weather-details-feels {
+  margin-top: 7px;
+}
+
+.feels-icon,
+.humidity-icon,
+.rain-icon,
+.wind-icon {
+  filter: invert(100%) sepia(10%) saturate(0%) hue-rotate(60deg) brightness(108%) contrast(103%);
+  height: 35px;
+  width: 35px;
+  margin-right: 15px;
+}
+
+.feels-text,
+.humidity-text,
+.rain-text,
+.wind-text {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.feels-temp,
+.humidity-num,
+.rain-percent,
+.wind-speed {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* <============ FORECAST ============> */
+
+.change-forecast {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.forecast-selected {
+  border: 2px solid #fff;
+  border-radius: 3px;
+}
+
+.change-forecast-daily {
+  margin-right: 2rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+}
+
+.change-forecast-hourly {
+  margin-right: 2rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+}
+
+.forcast-daily-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.day {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.temp-high {
+  margin-bottom: 0.4rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.temp-low {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.day-img {
+  height: 36px;
+  width: 36px;
+  filter: invert(100%) sepia(10%) saturate(0%) hue-rotate(60deg) brightness(108%) contrast(103%);
+
+}
+
+/* <============ MEDIA QUERIES ============> */
+@media (max-width: 1900px) {
+  body {
+    padding: 75px 300px 150px 300px;
+  }
+  .weather-info-description {
+    font-size: 2rem;
+  }
+
+  .weather-info-temp {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    padding: 75px 200px 100px 200px;
+  }
+}
+
+@media (max-width: 950px) {
+  body {
+    padding: 75px 100px 100px 100px;
+    min-width: 690px;
+    overflow: hidden;
+  }
+
+
+  .weather-info-description {
+    font-size: 1.8rem;
+  }
+
+  .weather-info-temp {
+    font-size: 3rem;
+  }
+  .city-icon {
+    height: 60px;
+    width: 60px;
+  }
+
+  .forcast-daily-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .day{
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
+  .temp-high {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .temp-low {
+    text-align: center;
+  }
+  .day-img {
+    position: relative;
+  }
+  .day-img img {
+    position: absolute;
+    bottom: 70px;
+    left: 40px;
+    height: 36px;
+    width: 36px;
+  }
+}
