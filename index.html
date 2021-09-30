@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="main.css">
+  <!-- JavaScript -->
+  <script src="main.js" defer></script>
+  
+</head>
+<body>
+  <div class="weather-info-main">
+    <div class="weather-info">
+
+      <div class="weather-info-description">Clear Sky</div>
+      <div class="weather-info-city">Downey</div>
+      <div class="weather-info-date">Wednesday, 29th Sep `21</div>
+      <div class="weather-info-time">3:04 pm</div>
+      <div class="weather-info-temp">75 °F</div>
+      <div class="weather-info-units-f">Display °C</div>
+      <div class="weather-info-units-c selected-unit">Display °F</div>
+      <div class="weather-info-icon">
+        <img class="city-icon" src="../src/images/sun.svg" alt="">
+      </div>
+
+      <div class="search-box">
+        <input type="text" class="search-box-input" placeholder="Search City...">
+        <div class="search-icon">
+          <img class="search-icon-img" src="../src/images/magnifying-glass.svg" alt="">
+        </div>
+      </div>
+      <div class="error-msg"></div>
+
+    </div>
+
+    <div class="weather-details-container">
+      <div class="weather-details-feels">
+        <img class="feels-icon" src="../src/images/cool.svg" alt="">
+        <div class="feels-text-container">
+          <div class="feels-text">Feels Like</div>
+          <div class="feels-temp">75 °F</div>
+        </div>
+      </div>
+      <div class="weather-details-humidity">
+        <img class="humidity-icon" src="../src/images/humidity.svg" alt="">
+        <div class="humidity-text-container">
+          <div class="humidity-text">Humidity</div>
+          <div class="humidity-num">56 %</div>
+        </div>
+      </div>
+      <div class="weather-details-chance-rain">
+        <img class="rain-icon" src="../src/images/rain.svg" alt="">
+        <div class="rain-text-container">
+          <div class="rain-text">Rain Chance</div>
+          <div class="rain-percent">0 %</div>
+        </div>
+      </div>
+      <div class="weather-details-wind-speed">
+        <img class="wind-icon" src="../src/images/breeze.svg" alt="">
+        <div class="wind-text-container">
+          <div class="wind-text">Wind Speed</div>
+          <div class="wind-speed">4 mph</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="forecast">
+    <div class="change-forecast">
+      <div class="change-forecast-daily forecast-selected">Daily</div>
+      <div class="change-forecast-hourly ">Hourly</div>
+    </div>
+
+    <div class="forcast-daily-container">
+      <div class="forecast-daily">
+        <div class="day">Thursday</div>
+        <div class="temp-high">85 °F</div>
+        <div class="temp-low">67 °F</div>
+        <div class="day-img"><img src="../src/images/sun.svg" alt=""></div>
+      </div>
+      <div class="forecast-daily">
+        <div class="day">Thursday</div>
+        <div class="temp-high">85 °F</div>
+        <div class="temp-low">67 °F</div>
+        <div class="day-img"><img src="../src/images/sun.svg" alt=""></div>
+      </div>
+      <div class="forecast-daily">
+        <div class="day">Saturday</div>
+        <div class="temp-high">85 °F</div>
+        <div class="temp-low">67 °F</div>
+        <div class="day-img"><img src="../src/images/sun.svg" alt=""></div>
+      </div>
+      <div class="forecast-daily">
+        <div class="day">Sunday</div>
+        <div class="temp-high">85 °F</div>
+        <div class="temp-low">67 °F</div>
+        <div class="day-img"><img src="../src/images/sun.svg" alt=""></div>
+      </div>
+      <div class="forecast-daily">
+        <div class="day">Monday</div>
+        <div class="temp-high">85 °F</div>
+        <div class="temp-low">67 °F</div>
+        <div class="day-img"><img src="../src/images/sun.svg" alt=""></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
